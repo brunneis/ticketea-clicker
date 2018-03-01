@@ -31,7 +31,7 @@ function sleep(ms) {
       $('#select-ticket-0').val(String(NO_TICKETS));
       $('#select-ticket-0').change();
       tries++;
-      if (tries > NO_TRIES) {
+      if (tries == NO_TRIES) {
         location.reload();
         break;
       }
