@@ -14,9 +14,9 @@
  */
 
 const EVENT_URL = ""; // To fill
-var NO_TICKETS = 6;
-var NO_TRIES = 50;
-var SLEEP_MILLIS = 1;
+const NO_TICKETS = 6;
+const NO_TRIES = 50;
+const SLEEP_MILLIS = 1;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
