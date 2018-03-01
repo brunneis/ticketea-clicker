@@ -13,7 +13,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// Number of tickets to reserve
 const NO_TICKETS=6;
 const NO_TRIES=50;
 const SLEEP_MILLIS=0;
