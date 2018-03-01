@@ -15,16 +15,24 @@
 
 // Number of tickets to reserve
 const NO_TICKETS=6;
+const NO_TRIES=50;
+const SLEEP_MILLIS=0;
  
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
  
 $("#start-purchase-process-desktop").click();
+var tries = 0;
 const continueButton = $('#continue-button');
 while(!continueButton.is(":visible")) {
   $('#select-ticket-0').val(String(NO_TICKETS));
   $('#select-ticket-0').change();
-  await sleep(10);
+  tries++;
+  if (tries > NO_TRIES) {
+    location.reload();
+    break;
+  }
+  await sleep(SLEEP_MILLIS);
 }
 continueButton.click();
